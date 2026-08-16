@@ -10,6 +10,8 @@
 
 ![Center Column Shift screenshot](./assets/screenshot.png)
 
+![Center Column Shift in standard mode](./assets/screenshot-shift.png)
+
 ## What it does
 
 DeepSeek Harness renders a three-column frame: `sidebar | conversation | details`. Plugin surfaces (e.g. the AgentTeams activity panel, an OmniParser/OmniVision dock, or any panel occupying the right side of the frame) have to share the width with the conversation column, so they often end up squeezed or partially hidden behind it.
@@ -67,6 +69,8 @@ MIT
 **Center Column Shift** — [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的浏览器端(client)插件:通过一个可拖动把手,把整个会话列向左平移,**给右侧腾出空间,让插件内容显示更多**。
 
 ![Center Column Shift 效果图](./assets/screenshot.png)
+
+![Center Column Shift 标准模式效果](./assets/screenshot-shift.png)
 
 ## 功能简介
 
