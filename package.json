@@ -11,7 +11,7 @@
     "./cordis.patch.yml": "./cordis.patch.yml",
     "./package.json": "./package.json"
   },
-  "files": ["lib/", "cordis.patch.yml"],
+  "files": ["lib/", "cordis.patch.yml", "assets/"],
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"

@@ -8,6 +8,8 @@
 
 **Center Column Shift** — a browser (client) plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) that lets you shift the whole conversation column left/right with a draggable handle.
 
+![Center Column Shift screenshot](./assets/screenshot.png)
+
 ## What it does
 
 DeepSeek Harness renders a three-column frame: `sidebar | conversation | details`. This plugin adds a small floating handle (`⇔ 移动内容`) into the frame-wide `shell.overlay` layer, vertically aligned with the "Full access" chip. Dragging it applies a `translateX()` transform to the entire conversation column — session content **and** the input composer move together — so you can slide the chat left to free up space on the right (e.g. to park another panel or compare content side by side).
@@ -61,6 +63,8 @@ MIT
 # dsh_center-column-shift
 
 **Center Column Shift** — [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的浏览器端(client)插件:通过一个可拖动把手,让整个会话列左右平移。
+
+![Center Column Shift 效果图](./assets/screenshot.png)
 
 ## 功能简介
 
