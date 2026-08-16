@@ -1,7 +1,7 @@
 {
   "name": "dsh_center-column-shift",
   "version": "0.1.0",
-  "description": "Center Column Shift for DeepSeek Harness: a draggable handle that shifts the whole conversation column left/right (and re-centers it), so other panels can sit beside the chat",
+  "description": "Center Column Shift for DeepSeek Harness: a draggable handle that shifts the conversation column left, freeing up space on the right so plugin content can show more",
   "type": "module",
   "main": "lib/index.js",
   "types": "lib/types/index.d.ts",

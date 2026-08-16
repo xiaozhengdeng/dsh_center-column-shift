@@ -6,15 +6,17 @@
 
 # dsh_center-column-shift
 
-**Center Column Shift** — a browser (client) plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) that lets you shift the whole conversation column left/right with a draggable handle.
+**Center Column Shift** — a browser (client) plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) that shifts the whole conversation column left with a draggable handle, **freeing up space on the right so plugin content has more room to show**.
 
 ![Center Column Shift screenshot](./assets/screenshot.png)
 
 ## What it does
 
-DeepSeek Harness renders a three-column frame: `sidebar | conversation | details`. This plugin adds a small floating handle (`⇔ 移动内容`) into the frame-wide `shell.overlay` layer, vertically aligned with the "Full access" chip. Dragging it applies a `translateX()` transform to the entire conversation column — session content **and** the input composer move together — so you can slide the chat left to free up space on the right (e.g. to park another panel or compare content side by side).
+DeepSeek Harness renders a three-column frame: `sidebar | conversation | details`. Plugin surfaces (e.g. the AgentTeams activity panel, an OmniParser/OmniVision dock, or any panel occupying the right side of the frame) have to share the width with the conversation column, so they often end up squeezed or partially hidden behind it.
 
-- **Drag** the handle to shift the column horizontally (left shift only, clamped to `min(1000px, 50% of frame width)`).
+This plugin adds a small floating handle (`⇔ 移动内容`) into the frame-wide `shell.overlay` layer, vertically aligned with the "Full access" chip. Dragging it applies a `translateX()` transform to the entire conversation column — session content **and** the input composer move together — sliding the chat **left** so the right side opens up. The plugin content sitting on the right then gets the extra space and can display more (wider columns, full panels, more details).
+
+- **Drag** the handle to shift the column left (clamped to `min(1000px, 50% of frame width)`).
 - **Double-click** the handle or press **↺** to reset to the original position.
 - The offset **survives session switches**: the plugin re-locates the scroll body live (via `MutationObserver` + `ResizeObserver`) and replays the current offset whenever the conversation nodes are rebuilt.
 
@@ -62,15 +64,17 @@ MIT
 
 # dsh_center-column-shift
 
-**Center Column Shift** — [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的浏览器端(client)插件:通过一个可拖动把手,让整个会话列左右平移。
+**Center Column Shift** — [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) 的浏览器端(client)插件:通过一个可拖动把手,把整个会话列向左平移,**给右侧腾出空间,让插件内容显示更多**。
 
 ![Center Column Shift 效果图](./assets/screenshot.png)
 
 ## 功能简介
 
-DeepSeek Harness 的界面是 `侧栏 | 会话 | 详情` 三列布局。本插件在全局浮层 `shell.overlay` 上添加一个悬浮把手(`⇔ 移动内容`),与「Full access」芯片垂直对齐。拖动把手会对整个会话列应用 `translateX()` 变换——会话内容**和**输入框一起整体左右平移,方便给右侧腾出空间(例如并排摆放其他面板或对照内容)。
+DeepSeek Harness 的界面是 `侧栏 | 会话 | 详情` 三列布局。各类插件的界面(例如 AgentTeams 活动面板、OmniParser/OmniVision 识别面板,或任何占据框架右侧的插件面板)都要和会话列共享宽度,经常被挤得很窄,甚至被会话列遮挡一部分。
 
-- **拖动**把手,会话列整体左右平移(只允许左移,上限 `min(1000px, 50% 帧宽)`)。
+本插件在全局浮层 `shell.overlay` 上添加一个悬浮把手(`⇔ 移动内容`),与「Full access」芯片垂直对齐。拖动把手会对整个会话列应用 `translateX()` 变换——会话内容**和**输入框一起整体向左平移,右侧随之空出来。原本显示在右侧的插件内容就能利用多出来的空间,**展示更多内容**(更宽的列、完整的面板、更多细节)。
+
+- **拖动**把手,会话列整体向左平移(上限 `min(1000px, 50% 帧宽)`)。
 - **双击**把手或点击 **↺** 复位到原位。
 - 偏移量**在切换会话后自动保持**:插件通过 `MutationObserver` + `ResizeObserver` 实时重定位滚动容器,会话节点重建后自动重放当前偏移。
 
