@@ -1,0 +1,14 @@
+# dsh_center-column-shift bundle patch: mounts the plugin into the host composition
+# of a dsh profile. The node half is a thin stub; the row exists so the package
+# becomes a profile layer, which lets `dsh-client-modules` scan its `dsh.client`
+# declaration and load the browser half (the draggable handle) into the web
+# boot manifest (`window.__DSH_BOOT__`).
+#
+# Install: `dsh plugin --profile <name> add <this package>` (npm or a local
+# path). The `dsh plugin` command pnpm-installs the package into the profile
+# and reconciles it into the profile's `dsh.profile.bundles` layer list.
+- insert:
+    - id: dsh_center-column-shift
+      # Node-resolvable package name — must stay in sync with package.json
+      # `name`.
+      name: dsh_center-column-shift
